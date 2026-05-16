@@ -23,7 +23,8 @@ SPDX-FileCopyrightText: 2026 Okan Doğan
 SPDX-License-Identifier: CC-BY-4.0
 -->
 
-![vergabelab_community_hero_3](https://github.com/user-attachments/assets/64a62843-dc99-476e-8d7c-93b3894885fe)
+<img width="1200" height="410" alt="VergabeLab-Community" src="https://github.com/user-attachments/assets/1a2a22a4-b393-4b9e-9e3a-655342ba0a44" />
+
 ---
 
 # VergabeLab Community - Freie KI-Bausteine für Vergabestellen
