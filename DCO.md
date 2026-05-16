@@ -17,6 +17,13 @@ topics:
   - "Contributing"
   - "Rechtekette"
 ---
+<!--
+Rights note:
+This file contains own explanatory text by Okan Doğan and the official
+Developer Certificate of Origin text by The Linux Foundation and its contributors.
+No single SPDX license identifier applies to the entire file.
+See YAML frontmatter and the rights notices in the document body.
+-->
 
 # Developer Certificate of Origin (DCO)
 
