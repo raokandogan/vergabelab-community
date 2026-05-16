@@ -1,0 +1,70 @@
+name: Fehler / Konkrete Änderung an einem Baustein
+description: "Melde Halluzinationen, rechtliche Lücken oder schlage eine konkrete Textänderung vor."
+title: "[Änderung]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke für deinen Beitrag! Bitte poste **keine personenbezogenen Daten**, **keine Details laufender Vergaben** und **keine Betriebs- und Geschäftsgeheimnisse**. Beispiele bitte immer anonymisieren.
+        
+        💡 **Hast du eine Idee für einen komplett neuen Baustein oder eine offene Frage?** Dann nutze bitte unsere [Discussions](../discussions) anstatt eines Issues!
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: "Betroffener Bereich"
+      options:
+        - Markterkundung
+        - Leistungsbeschreibung
+        - Angebotswertung & Dokumentation
+        - Templates / Muster
+        - Guides / Einbindung
+        - Sonstiges
+    validations:
+      required: true
+
+  - type: input
+    id: file
+    attributes:
+      label: "Betroffene Datei (wenn bekannt)"
+      description: "Pfad im Repo, z. B. prompts/markterkundung/01_..."
+      placeholder: "prompts/markterkundung/01_hinweistext_systemprompt_..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: "Was ist das Problem / Was hast du beobachtet?"
+      description: "Bitte kurz beschreiben (z. B. unklare Formulierung, rechtlicher Fehler, LLM ignoriert eine Vorgabe)."
+      placeholder: "In der Praxis führt Abschnitt X dazu, dass..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: prompt_io
+    attributes:
+      label: "Beispiel: Eingabe & Ausgabe (Besonders bei KI-Halluzinationen)"
+      description: "Was hast du das Modell gefragt (Testfall) und was kam als fehlerhafte Antwort heraus? Bitte gekürzt angeben."
+      placeholder: "Eingabe: ... \n\nAusgabe: ..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: "Erwartetes Verhalten / Dein Lösungsvorschlag"
+      description: "Wie sollte es stattdessen sein? Gerne mit einem konkreten Formulierungsvorschlag für den Text."
+      placeholder: "Ich schlage vor, den Abschnitt durch folgenden Text zu ersetzen: ..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Setup & Kontext (optional)"
+      description: "Welches Modell/Setup hast du genutzt? (z. B. Custom GPT, Claude, Azure, self-hosted) und in welchem Kontext (z.B. Offenes Verfahren)?"
+      placeholder: "Genutzt in ChatGPT Plus / Offenes Verfahren / IT-Dienstleistung ..."
+    validations:
+      required: false

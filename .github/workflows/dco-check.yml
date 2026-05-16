@@ -1,0 +1,50 @@
+name: DCO
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, edited]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  signoff:
+    name: DCO sign-off check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate Signed-off-by trailer on all PR commits
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const pull_number = context.payload.pull_request.number;
+
+            const commits = await github.paginate(
+              github.rest.pulls.listCommits,
+              { owner, repo, pull_number, per_page: 100 }
+            );
+
+            const missing = [];
+            const signoffRegex = /^Signed-off-by:\s+.+\s+<[^<>\s]+@[^<>\s]+>\s*$/mi;
+
+            for (const commit of commits) {
+              const message = commit.commit?.message || "";
+              if (!signoffRegex.test(message)) {
+                missing.push(`${commit.sha.slice(0, 7)} (${commit.commit?.author?.name || "unknown"})`);
+              }
+            }
+
+            if (missing.length > 0) {
+              core.setFailed(
+                [
+                  "DCO check failed: The following commits are missing a valid Signed-off-by trailer:",
+                  ...missing.map((entry) => `- ${entry}`),
+                  "",
+                  "Fix: Re-sign commits with 'git commit --amend -s' (or interactive rebase for multiple commits)."
+                ].join("\n")
+              );
+            } else {
+              core.info(`DCO check passed for ${commits.length} commit(s).`);
+            }
