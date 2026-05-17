@@ -27,7 +27,7 @@ SPDX-License-Identifier: CC-BY-4.0
 
 # Lizenz-FAQ (VergabeLab Community)
 
-Diese FAQ ist eine praxisnahe Orientierung für Nutzer der VergabeLab-Community-Artefakte. Maßgeblich sind die Lizenztexte sowie die Lizenzangaben in den jeweiligen Dateien (SPDX-Header/README).
+Diese FAQ ist eine praxisnahe Orientierung für Nutzer der VergabeLab-Community-Artefakte. Maßgeblich sind die Lizenztexte sowie die Lizenzangaben in den jeweiligen Dateien, insbesondere YAML-/SPDX-Hinweise und README-Dateien.
 
 ---
 
@@ -37,7 +37,7 @@ Diese FAQ ist eine praxisnahe Orientierung für Nutzer der VergabeLab-Community-
 
 **Ausnahme:** Echte Software-/Tooling-Bestandteile (Code, Plugins, Skripte) werden – sofern vorhanden – separat lizenziert (vorgesehen: **EUPL 1.2**) und in einem eigenen Ordner (z. B. `tooling/`) geführt.
 
-**Wichtig:** Hat eine Datei einen SPDX-Header oder einen eindeutigen Lizenzhinweis, **geht dieser vor**.
+**Wichtig:** Hat eine Datei einen YAML-/SPDX-Hinweis oder einen sonstigen eindeutigen Lizenzhinweis, **geht dieser vor**.
 
 ---
 
@@ -64,13 +64,14 @@ Sobald du Inhalte **weitergibst** (z. B. an IT-Dienstleister, Plattformanbieter,
 ## 4) Was genau muss ich bei CC BY 4.0 angeben (Attribution)?
 
 Wenn du Inhalte weitergibst oder veröffentlichst, solltest du mindestens angeben:
-- Projekt/Quelle (VergabeLab Community + Repo-Link) + Urheber (Okan Doğan)
+- Projekt/Quelle (VergabeLab Community + Repo-Link) + angegebener Urheber/Rechteinhaber
 - Lizenz (CC BY 4.0) + Lizenzlink
 - Hinweis, ob Änderungen vorgenommen wurden (kurz)
 
 **Beispiel:**
 > Basierend auf VergabeLab Community (c) 2026 Okan Doğan – CC BY 4.0.  
-> Quelle: https://github.com/VergabeLab/vergabelab-community – Änderungen: angepasst für [Organisation], [Datum].
+> Quelle: https://github.com/VergabeLab/vergabelab-community – Änderungen: angepasst für [Organisation], [Datum].  
+> Bitte den jeweils in der Datei angegebenen Urheber/Rechteinhaber übernehmen, wenn dieser abweicht.
 
 **Wo platzieren?**  
 Geeignet sind z. B. Projektdokumentation, „Über dieses System“-Seite, Admin-Doku, Anlage/Quellenblatt in der Vergabeakte oder (bei Dokumentvorlagen) ein Quellenhinweis im Dokumentfuß.
@@ -91,6 +92,6 @@ Anpassen ist erlaubt. Bei Weitergabe/Veröffentlichung gilt:
 ## 6) Was gilt, wenn es (später) echte Software/Tools im Ordner `tooling/` gibt?
 
 Für `tooling/` ist – sofern dort ausgewiesen – **EUPL 1.2** vorgesehen.  
-Dann gelten die dortigen Regeln für Weitergabe/Änderungen gemäß EUPL (Lizenz- und Urheberhinweise beibehalten, Lizenztext beachten).
+Dann sind bei Nutzung, Bearbeitung, Weitergabe oder öffentlicher Zugänglichmachung die Bedingungen der EUPL 1.2 zu beachten, insbesondere Lizenz- und Urheberhinweise sowie der Lizenztext.
 
 Solange `tooling/` nicht existiert oder keine EUPL-Dateien enthalten sind, betrifft dich das nicht.
