@@ -161,17 +161,36 @@ repository_area: "prompts/markterkundung/it-beschaffung"
 
 ## 6. Wer steht im Copyright?
 
-In den SPDX-Hinweis gehört der tatsächliche Rechteinhaber bzw. die Person oder Organisation, die berechtigt ist, den Beitrag unter der angegebenen Lizenz bereitzustellen.
+In den Rechtehinweis gehört die tatsächliche Person oder Organisation, die berechtigt ist, den Beitrag unter der angegebenen Lizenz bereitzustellen.
 
-Beispiele:
+Die Angabe erfolgt an zwei Stellen:
+
+1. im YAML-Frontmatter im Feld `spdx_file_copyright_text`,
+2. im anschließenden SPDX-Kommentar als `SPDX-FileCopyrightText`.
+
+Beide Angaben sollen inhaltlich übereinstimmen.
+
+Beispiel:
 
 ```md
+---
+title: "..."
+version: "0.1.0"
+status: "initial"
+language: "de-DE"
+type: "knowledge"
+license: "CC-BY-4.0"
+repository_area: "wissen/markterkundung"
+spdx_file_copyright_text: "2026 Okan Doğan"
+spdx_license_identifier: "CC-BY-4.0"
+---
+
 <!--
 SPDX-FileCopyrightText: 2026 Okan Doğan
 SPDX-License-Identifier: CC-BY-4.0
 -->
 ```
-Bei mehreren Rechteinhabern oder substantiellen Beiträgen mehrerer Personen sind mehrere Zeilen zulässig:
+Bei mehreren Rechteinhabern oder substantiellen Beiträgen mehrerer Personen sind mehrere SPDX-Zeilen zulässig:
 
 ```md
 <!--
@@ -180,6 +199,18 @@ SPDX-FileCopyrightText: 2026 Vorname Nachname
 SPDX-License-Identifier: CC-BY-4.0
 -->
 ```
+Im YAML-Frontmatter kann dies entsprechend als Textwert abgebildet werden:
+```md
+spdx_file_copyright_text: "2026 Okan Doğan; 2026 Vorname Nachname"
+```
+Alternativ kann bei künftiger technischer Auswertung eine Listenstruktur verwendet werden:
+```md
+spdx_file_copyright_text:
+  - "2026 Okan Doğan"
+  - "2026 Vorname Nachname"
+```
+Für den aktuellen Stand genügt ein einheitlicher Textwert. Wichtig ist, dass YAML und SPDX-Kommentar inhaltlich nicht widersprüchlich sind.
+
 Bestehende Copyright-Zeilen dürfen nicht ohne Klärung entfernt werden.
 
 ---
