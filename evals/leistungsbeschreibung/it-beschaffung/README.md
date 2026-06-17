@@ -1,7 +1,7 @@
 ---
 title: "README – Evaluation Leistungsbeschreibung IT-Beschaffung"
 version: "0.1.0"
-last_reviewed: "2026-06-11"
+last_reviewed: "2026-06-15"
 status: "initial"
 language: "de-DE"
 type: "eval"
@@ -33,10 +33,14 @@ SPDX-License-Identifier: CC-BY-4.0
 
 # Evaluation Leistungsbeschreibung IT-Beschaffung
 
-Dieser Ordner soll künftig Testakten und Evaluationsmaterialien für KI-gestützte Unterstützung bei Leistungsbeschreibungen in der IT-Beschaffung enthalten.
+Dieser Ordner enthält Testakten und Evaluationsmaterialien für KI-gestützte Unterstützung bei Leistungsbeschreibungen in der IT-Beschaffung.
 
 Testakten in diesem Bereich müssen vollständig fiktiv sein. Sie dürfen keine echten Personen, Vergabestellen, Anbieter, Projekte oder vertraulichen Verfahrensinformationen enthalten.
 
-Die Materialien sollen vergleichbare Tests ermöglichen und insbesondere die Prüfung auf Neutralität, Vollständigkeit, Trennung von Muss-, Soll- und Kann-Anforderungen, Vermeidung unzulässiger Produkt- oder Herstellervorgaben sowie Dokumentationsfähigkeit unterstützen.
+Die Materialien ermöglichen vergleichbare Tests und unterstützen insbesondere die Prüfung auf Neutralität, Vollständigkeit, Trennung von Mindestanforderungen (`MUSS`), bewertbaren Anforderungen (`KANN`) und optionalen Leistungsbestandteilen, Vermeidung unzulässiger Produkt- oder Herstellervorgaben sowie Dokumentationsfähigkeit.
 
-Noch ist keine Testakte enthalten. Ein künftiger Eval-Fall kann neutral angekündigt und später gesondert ergänzt werden, zum Beispiel `LB-IT-01`.
+## Enthaltene Testakten
+
+| Testakte | Gegenstand | Schwerpunkt |
+|---|---|---|
+| [`LB-IT-01`](./LB-IT-01/) | Fortführung des Vorhabens `SchulServicePortal` aus `M-IT-01` | Überführung neutralisierter Markterkenntnisse in eine Leistungsbeschreibung |
