@@ -1,7 +1,7 @@
 ---
 title: "VergabeLab Community"
-version: "0.2.0"
-last_reviewed: "2026-06-07"
+version: "0.3.0"
+last_reviewed: "2026-06-17"
 status: "initial"
 language: "de-DE"
 type: "root-readme"
@@ -259,8 +259,10 @@ Die derzeitige Struktur stellt sich vereinfacht wie folgt dar:
 │  └─ EUPL-1.2.txt
 │
 ├─ POLICIES/
-│  └─ SPDX.md
+│  ├─ SPDX.md
+│  └─ VERSIONING.md
 │
+├─ CHANGELOG.md
 ├─ CONTRIBUTING.md
 ├─ DCO.md
 ├─ index.html
@@ -268,6 +270,19 @@ Die derzeitige Struktur stellt sich vereinfacht wie folgt dar:
 ```
 > **Experimentelle Leseschnittstelle**
 > Unter api.vergabelab.de werden ausgewählte öffentliche Inhalte des Repositorys über eine statische Leseschnittstelle bereitgestellt. Die Schnittstelle befindet sich in einer experimentellen Phase. Sie ist derzeit keine (versionierte) Produkt-API; Inhalte, Pfade, Umfang und technische Struktur können sich jederzeit ändern. Es besteht kein Anspruch auf dauerhafte Verfügbarkeit oder Abwärtskompatibilität.
+
+---
+
+### Versionierung und Releases
+
+VergabeLab unterscheidet zwischen verschiedenen Versionsebenen:
+
+- **Repository-Releases** kennzeichnen einen gemeinsamen öffentlichen Stand des gesamten Repositorys. Sie werden durch Git-Tags nach dem Schema `vMAJOR.MINOR.PATCH` und durch GitHub Releases dokumentiert.
+- Das YAML-Feld **`version`** bezeichnet die Version der jeweiligen Datei. Es wird nicht bei jedem Repository-Release automatisch erhöht.
+- Eine verbindliche gemeinsame **Modulversion** wird derzeit noch nicht geführt.
+- Für reproduzierbare Testläufe und technische Referenzen ist zusätzlich der jeweilige Git-Commit-SHA maßgeblich.
+
+Die Regeln stehen in der [Versionierungs- und Release-Policy](POLICIES/VERSIONING.md). Veröffentlichte Stände und Änderungen werden im [Changelog](CHANGELOG.md) dokumentiert.
 
 ---
 
